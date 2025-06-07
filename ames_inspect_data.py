@@ -7,7 +7,7 @@ import pandas as pd
     "--file-path",
     required=True,
     type=click.Path(exists=True),
-    help="Path to the file with Ames housing data.",
+    help="Path to the Ames housing dataset file (.parquet)."
 )
 def inspect_ames_data(file_path: str) -> None:
     df = pd.read_parquet(file_path)
